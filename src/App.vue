@@ -1,19 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <div id="nav">
+      <router-link to="/">Titles</router-link> |
+      <router-link to="/Users">Users</router-link> |
+      <router-link to="/Merchants">Merchants</router-link> |
+      <router-link to="/Categories">Categories</router-link> |
+      <router-link to="/Transactions">Transactions</router-link> |
+    </div>
+    <router-view />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+};
 </script>
 
 <style>

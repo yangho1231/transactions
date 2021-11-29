@@ -1,0 +1,4 @@
+getAllUsers: [UserInfo!]!
+getAllMerchants: [MerchantInfo!]!
+getAllCategories: [CategoryInfo!]!
+getAllTransactions: [TransactionInfo!]!

@@ -1,0 +1,40 @@
+mutation createTransaction(
+  $amount: String!
+  $description: String!
+  $debit: Boolean!
+  $credit: Boolean!
+  $userId: String!
+  $merchantId: String!
+  $categoryId: String!
+) {
+  createTransaction(
+    amount: $amount
+    description: $description
+    debit: $debit
+    credit: $credit
+    userId: $userId
+    merchantId: $merchantId
+    categoryId: $categoryId
+  ) {
+    id
+    amount
+    description
+    debit
+    credit
+    userId
+    merchantId
+    categoryId
+    merchant {
+      id
+      merchantName
+    }
+    category {
+      id
+      categoryName
+    }
+    user {
+      id
+      firstName
+    }
+  }
+}

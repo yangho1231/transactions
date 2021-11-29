@@ -1,0 +1,8 @@
+# Put your custom input type definitions here
+
+# This is the way that uploads must be done through GraphQL
+scalar Upload # See note in server/index.js about GraphQL uploads
+input MerchantInput {
+  merchantName: String
+  id: ID!
+}

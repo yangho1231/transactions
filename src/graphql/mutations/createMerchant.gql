@@ -1,0 +1,6 @@
+mutation createMerchant($merchantName: String!) {
+  createMerchant(merchantName: $merchantName) {
+    id
+    merchantName
+  }
+}

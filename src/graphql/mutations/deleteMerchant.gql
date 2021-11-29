@@ -1,0 +1,6 @@
+mutation deleteMerchant($id: ID!) {
+  deleteMerchant(id: $id) {
+    id
+    merchantName
+  }
+}

@@ -1,0 +1,29 @@
+type UserInfo {
+  firstName: String
+  lastName: String
+  id: ID!
+}
+
+type MerchantInfo {
+  merchantName: String
+  id: ID!
+}
+
+type CategoryInfo {
+  categoryName: String
+  id: ID!
+}
+
+type TransactionInfo {
+  id: ID!
+  amount: String
+  description: String
+  debit: Boolean
+  credit: Boolean
+  userId: String
+  merchantId: String
+  categoryId: String
+  merchant: MerchantInfo
+  category: CategoryInfo
+  user: UserInfo
+}

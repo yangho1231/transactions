@@ -1,0 +1,15 @@
+createUser(firstName: String!, lastName: String!): UserInfo
+deleteUser(id: ID!): UserInfo
+createMerchant(merchantName: String!): MerchantInfo
+deleteMerchant(id: ID!): MerchantInfo
+createCategory(categoryName: String!): CategoryInfo
+deleteCategory(id: ID!): CategoryInfo
+createTransaction(amount: String!,
+    description: String!,
+    debit: Boolean!,
+    credit: Boolean!,
+    userId: String!,
+    merchantId: String!,
+    categoryId: String!,
+): TransactionInfo
+deleteTransaction(id: ID!): TransactionInfo

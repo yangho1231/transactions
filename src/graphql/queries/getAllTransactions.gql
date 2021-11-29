@@ -1,0 +1,25 @@
+query getAllTransactions {
+  getAllTransactions {
+    id
+    amount
+    description
+    credit
+    debit
+    userId
+    categoryId
+    merchantId
+    user {
+      id
+      firstName
+      lastName
+    }
+    merchant {
+      id
+      merchantName
+    }
+    category {
+      id
+      categoryName
+    }
+  }
+}
