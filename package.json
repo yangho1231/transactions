@@ -5,9 +5,7 @@
   "scripts": {
     "start:client": "vue-cli-service serve",
     "start:server": "nodemon server/server.js",
-    "build": "npm run build",
-    "install-dist": "npm install",
-    "heroku-postbuild": "npm run install-dist && npm run build",
+    "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
