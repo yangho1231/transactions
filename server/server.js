@@ -8,6 +8,7 @@ require("dotenv").config();
 async function startServer() {
   const userName = process.env.USER_NAME;
   const password = process.env.PASSWORD;
+  const PORT = process.env.PORT || 4005;
   const URI = `mongodb+srv://${userName}:${password}@cluster0.89g21.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
   const app = express();
   const apolloServer = new ApolloServer({
@@ -24,7 +25,8 @@ async function startServer() {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
+  IF(process.env.NODE_ENV === "production");
   console.log("Mongoose connected");
-  app.listen(4005, () => console.log("Server is running on port 4005"));
+  app.listen(PORT(), console.log("Server is running on port 4005"));
 }
 startServer();
