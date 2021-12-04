@@ -6,7 +6,8 @@
     "start:client": "vue-cli-service serve",
     "start:server": "nodemon server/server.js",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "nodemon server/server.js"
   },
   "dependencies": {
     "@apollo/client": "^3.4.7",

@@ -25,7 +25,6 @@ async function startServer() {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
-  IF(process.env.NODE_ENV === "production");
   console.log("Mongoose connected");
   app.listen(PORT(), console.log("Server is running on port 4005"));
 }
