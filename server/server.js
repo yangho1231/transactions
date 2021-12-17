@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const { ApolloServer } = require("apollo-server-express");
 const schema = require("./graphql/schema");
 const resolvers = require("./graphql/resolvers");
@@ -10,6 +11,12 @@ async function startServer() {
   const password = process.env.PASSWORD;
   const URI = `mongodb+srv://${userName}:${password}@cluster0.89g21.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
   const app = express();
+  const staticConf = {
+    maxAge: "1d",
+    etag: false,
+  };
+  const publicPath = path.resolve(__dirname, "../dist/pwa");
+  app.use("/", express.static(publicPath, staticConf));
   const apolloServer = new ApolloServer({
     typeDefs: schema,
     resolvers,
