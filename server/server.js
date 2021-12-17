@@ -12,7 +12,7 @@ async function startServer() {
   const URI = `mongodb+srv://${userName}:${password}@cluster0.89g21.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
   const app = express();
 
-  const publicPath = path.resolve(__dirname, "../dist/index.html");
+  const publicPath = path.resolve(__dirname, "../dist");
 
   app.use("/", express.static(publicPath));
 
