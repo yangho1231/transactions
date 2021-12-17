@@ -1,6 +1,10 @@
 const express = require("express");
 const path = require("path");
 const { ApolloServer } = require("apollo-server-express");
+const {
+  ApolloServerPluginLandingPageGraphQLPlayground,
+} = require("apollo-server-core");
+
 const schema = require("./graphql/schema");
 const resolvers = require("./graphql/resolvers");
 const mongoose = require("mongoose");
@@ -19,6 +23,11 @@ async function startServer() {
   const apolloServer = new ApolloServer({
     typeDefs: schema,
     resolvers,
+    plugins: [
+      ApolloServerPluginLandingPageGraphQLPlayground({
+        // options
+      }),
+    ],
   });
 
   await apolloServer.start();
