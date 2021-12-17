@@ -11,12 +11,9 @@ async function startServer() {
   const password = process.env.PASSWORD;
   const URI = `mongodb+srv://${userName}:${password}@cluster0.89g21.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
   const app = express();
-  const staticConf = {
-    maxAge: "1d",
-    etag: false,
-  };
+
   const publicPath = path.resolve(__dirname, "../dist/pwa");
-  app.use("/", express.static(publicPath, staticConf));
+  app.use("/", express.static(publicPath));
   const apolloServer = new ApolloServer({
     typeDefs: schema,
     resolvers,
