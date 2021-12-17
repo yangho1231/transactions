@@ -13,6 +13,7 @@ async function startServer() {
   const app = express();
 
   const publicPath = path.resolve(__dirname, "../dist/pwa");
+
   app.use("/", express.static(publicPath));
   const apolloServer = new ApolloServer({
     typeDefs: schema,
